@@ -1,0 +1,4 @@
+﻿  line.cpp
+c:\users\administrator\documents\visual studio 2015\projects\opengl\opengl\line.cpp(137): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+  OpenGL.vcxproj -> C:\Users\Administrator\documents\visual studio 2015\Projects\OpenGL\Debug\OpenGL.exe
+  OpenGL.vcxproj -> C:\Users\Administrator\documents\visual studio 2015\Projects\OpenGL\Debug\OpenGL.pdb (Partial PDB)
