@@ -1,31 +1,35 @@
 #include "movingQuad.h"
 #include <string>;
 
-movingQuad::movingQuad(int qsize, int qxCenter, int qyCenter, int qspeed)
+movingQuad::movingQuad(int size, int qxCenter, int qyCenter, float speed)
 {
-	int xCenter(qxCenter);
-	int yCenter(qyCenter);
-	int size(qsize);
-	int speed(qspeed);
+	xGain = 1;
+	yGain = 1;
+
+	xCenter = qxCenter;
+	yCenter = qyCenter;
+	m_size = size;
+	m_speed =speed;
+
 }
 
 void movingQuad::move() {
-	xCenter += xGain*speed;
-	yCenter += yGain*speed;
+	xCenter += xGain*m_speed;
+	yCenter += yGain*m_speed;
 }
 
 int movingQuad::getMaxX() {
-	return xCenter + size;
+	return xCenter + m_size;
 }
 int movingQuad::getMinX() {
-	return xCenter - size;
+	return xCenter - m_size;
 }
 
 int movingQuad::getMaxY() {
-	return yCenter + size;
+	return yCenter + m_size;
 }
 int movingQuad::getMinY() {
-	return yCenter - size;
+	return yCenter - m_size;
 }
 
 //std::string movingQuad::toString() {

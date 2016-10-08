@@ -6,8 +6,8 @@
 
 using namespace std;
 
-movingQuad *quad1 = new movingQuad(0, 15, 150, 1);
-movingQuad *quad2 = new movingQuad(0, 75, 80, 6);
+movingQuad *quad1 = new movingQuad(15, 60, 150, 1);
+movingQuad *quad2 = new movingQuad(10, 25, 20, 1);
 
 int MAXHEIGHT = 237;
 int MINHEIGHT = 13;
@@ -84,7 +84,7 @@ void display(void)
 
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glColor4f(0.0, 1.0, 0.0, 0.5);
+	glColor4f(1.0, 0.0, 0.0, 0.5);
 	glBegin(GL_QUADS);
 	glVertex2i(quad2->getMinX(), quad2->getMaxY()); //Top left
 	glVertex2i(quad2->getMinX(), quad2->getMinY()); // Bottom left
@@ -92,8 +92,8 @@ void display(void)
 	glVertex2i(quad2->getMaxX(), quad2->getMaxY()); // Top Right
 	glEnd();
 
-	//moveCheck(quad2);
-	//quad2->move();
+	moveCheck(quad2);
+	quad2->move();
 	
 	glDisable(GL_BLEND);
 	// Now process all the OpenGL commands as quickly as possible
